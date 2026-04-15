@@ -69,11 +69,6 @@ async def root():
     return {"message": "Hello World"}
 
 
-@app.get("/creds")
-async def credentials():
-    return auth_handler.get_credentials()
-
-
 @app.get("/hello/{name}")
 async def say_hello(name: str):
     return {"message": f"Hello {name}"}
