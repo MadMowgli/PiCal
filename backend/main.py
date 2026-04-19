@@ -1,6 +1,5 @@
 from datetime import datetime
 import json
-import os
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI

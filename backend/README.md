@@ -2,10 +2,15 @@
 
 A FastAPI backend for a Raspberry Pi home dashboard. Pulls calendar data from Google Calendar and exposes it via REST API. Weather and SBB train information will follow.
 
+## Hardware
+
+- Raspberry Pi (non-headless, running a desktop environment with a browser)
+- WaveShare 7.9inch HDMI Capacitive Touch Display (400x1280, portrait-oriented)
+
 ## Authentication Workflow
 
 The app uses Google OAuth 2.0 with read-only calendar access. On first run, it opens a browser for you to authenticate with your Google account. After that, the token is cached in `token.json` and refreshed automatically.
-If the token expires and can't be refreshed, the browser flow is triggered again. On a headless Pi, the initial authentication must happen on a machine with a browser -- copy the resulting `token.json` to the Pi afterwards.
+If the token expires and can't be refreshed, the browser flow is triggered again. Since the Pi runs a desktop environment with a browser, the OAuth flow can be completed directly on the device.
 
 ## Prerequisites
 

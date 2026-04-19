@@ -1,5 +1,5 @@
-client_secret.json
-token.json
-config.json
+backend/client_secret.json
+backend/token.json
+backend/config.json
 ./idea/
 .claude/
